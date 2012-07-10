@@ -19,7 +19,7 @@ Group:		Development/Python
 Url:		http://code.google.com/p/python-twiggy/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
-BuildRequires:	python-sphinx
+BuildRequires:	python-devel, python-sphinx
 BuildRequires:	python-sphinxcontrib-googleanalytics
 
 %description
