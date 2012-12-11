@@ -19,7 +19,7 @@ Group:		Development/Python
 Url:		http://code.google.com/p/python-twiggy/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
-BuildRequires:	python-devel, python-sphinx
+BuildRequires:	python-sphinx
 BuildRequires:	python-sphinxcontrib-googleanalytics
 
 %description
@@ -44,3 +44,10 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %doc LICENSE README doc/_build/html
 %py_sitedir/%{tarname}*
 %py_sitedir/%{module}*
+
+
+%changelog
+* Tue Jul 10 2012 Lev Givon <lev@mandriva.org> 0.4.4-1
++ Revision: 808762
+- imported package python-twiggy
+
