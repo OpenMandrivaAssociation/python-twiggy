@@ -34,7 +34,7 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %clean
 
 %files
-%doc LICENSE README doc/_build/html
+%doc LICENSE  doc/_build/html
 %{py_puresitedir}/%{tarname}*
 %{py_puresitedir}/%{module}*
 
