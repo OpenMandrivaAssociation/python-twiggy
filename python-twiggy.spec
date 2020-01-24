@@ -8,8 +8,8 @@
 Summary:	A Pythonic logger package
 
 Name:		python-%{module}
-Version:	0.4.5
-Release:	2
+Version:	0.4.7
+Release:	1
 Source0:	http://pypi.python.org/packages/source/T/Twiggy/Twiggy-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
