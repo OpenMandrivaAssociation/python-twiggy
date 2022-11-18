@@ -8,12 +8,12 @@
 Summary:	A Pythonic logger package
 
 Name:		python-%{module}
-Version:	0.4.7
+Version:	0.5.1
 Release:	1
-Source0:	http://pypi.python.org/packages/source/T/Twiggy/Twiggy-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/T/Twiggy/Twiggy-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://code.google.com/p/python-twiggy/
+Url:		https://pypi.org/projects/Twiggy
 BuildArch:	noarch
 BuildRequires:	python-sphinx
 BuildRequires:	python-sphinxcontrib-googleanalytics
