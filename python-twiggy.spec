@@ -15,6 +15,7 @@ License:	BSD
 Group:		Development/Python
 Url:		https://pypi.org/projects/Twiggy
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	python-sphinx
 BuildRequires:	python-sphinxcontrib-googleanalytics
 
