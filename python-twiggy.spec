@@ -9,7 +9,7 @@ Summary:	A Pythonic logger package
 
 Name:		python-%{module}
 Version:	0.5.1
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/T/Twiggy/Twiggy-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
