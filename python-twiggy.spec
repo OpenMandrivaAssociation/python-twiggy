@@ -1,43 +1,46 @@
-%define tarname Twiggy
+%define oname Twiggy
 %define	module	twiggy
-%define	rel		1
-%if %mdkversion < 201100
-%else
-%endif
+
 
 Summary:	A Pythonic logger package
 
 Name:		python-%{module}
 Version:	0.5.1
 Release:	2
-Source0:	https://files.pythonhosted.org/packages/source/T/Twiggy/Twiggy-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/t/%{oname}/%{oname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://pypi.org/projects/Twiggy
 BuildArch:	noarch
 BuildRequires:	make
-BuildRequires:	python-sphinx
-BuildRequires:	python-sphinxcontrib-googleanalytics
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(sphinx)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(sphinx)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Twiggy is a logging package with a more Pythonic interface than
 Python's own logger package.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%autosetup -n %{oname}-%{version} -p1
+## Remove bundled egg-info
+rm -rf %{oname}.egg-info
 
 %build
+%py_build
 make -C doc html
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-
-%clean
+%py_install
 
 %files
-%doc LICENSE  doc/_build/html
-%{py_puresitedir}/%{tarname}*
-%{py_puresitedir}/%{module}*
+%doc README.rst  doc/_build/html
+%license LICENSE
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{oname}-%{version}*.*-info
 
 
 
