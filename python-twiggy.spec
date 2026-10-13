@@ -6,14 +6,14 @@ Summary:	A Pythonic logger package
 
 Name:		python-%{module}
 Version:	0.5.1
-Release:	2
+Release:	3
 Source0:	https://files.pythonhosted.org/packages/source/t/%{oname}/%{oname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://pypi.org/projects/Twiggy
 BuildArch:	noarch
 BuildRequires:	make
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(sphinx)
 BuildRequires:	python%{pyver}dist(setuptools)
